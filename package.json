@@ -1,6 +1,6 @@
 {
   "name": "@daangn/dawgjs",
-  "version": "0.0.1-rc.1",
+  "version": "0.0.1",
   "description": "DAWG implemented in typescript",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
