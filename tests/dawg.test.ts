@@ -1,18 +1,33 @@
 import { createDawg } from '../src/dawg';
 
-test('getPrefixes() should return all prefixes', () => {
+test('getPrefixes()', () => {
   const wg = createDawg([
+    '스타벅스사사삭',
     '스타벅스',
+    '스타벅',
     '스타',
-    '스타크래프트',
+    '스',
     '스타트',
     '파스타벅스',
   ]);
-  expect(wg.getPrefixes('스타벅스강남역점')).toEqual(['스타', '스타벅스']);
-  expect(wg.getPrefixes('스타트')).toEqual(['스타', '스타트']);
+  expect(wg.getPrefixes('스타벅스강남역점')).toEqual(['스', '스타', '스타벅', '스타벅스']);
+  expect(wg.getPrefixes('스타트')).toEqual(['스', '스타', '스타트']);
 });
 
-test('getSubstrings() should return all substrings in the graph', () => {
+test('getLongestPrefix()', () => {
+  const wg = createDawg([
+    '스타벅스사사삭',
+    '스타벅스',
+    '스타벅',
+    '스타',
+    '스',
+    '스타트',
+    '파스타벅스',
+  ]);
+  expect(wg.getLongestPrefix('스타벅스강남역점')).toEqual('스타벅스');
+})
+
+test('getSubstrings()', () => {
   const tests = [
     {
       words: ['병원', '의원', '최고의', '최상의'],
@@ -36,7 +51,7 @@ test('getSubstrings() should return all substrings in the graph', () => {
   }
 });
 
-test('wordsCount is added words count', () => {
+test('wordsCount', () => {
   const dataset = [
     {
       words: ['스타벅스', '스타벅스멜론', '스타', '스타멜론'],
@@ -62,7 +77,7 @@ test('wordsCount is added words count', () => {
   }
 });
 
-test('nodesCount should return minimized nodes count', () => {
+test('nodesCount', () => {
   const tests = [
     { words: ['스타벅스', '스타벅스멜론', '스타', '스타멜론'], expectedCount: 6 },
     { words: [], expectedCount: 0 },
