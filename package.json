@@ -1,10 +1,13 @@
 {
-  "name": "dawgjs",
-  "version": "0.0.1",
+  "name": "@daangn/dawgjs",
+  "version": "0.0.1-rc.0",
   "description": "DAWG implemented in typescript",
-  "main": "index.js",
-  "repository": "git@github.com:daangn/dawgjs.git",
-  "author": "cutiemung2 <cutiemung2@naver.com>",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daangn/dawgjs.git"
+  },
   "license": "MIT",
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
