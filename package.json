@@ -4,6 +4,11 @@
   "description": "DAWG implemented in typescript",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "README.md",
+    "package.json"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/daangn/dawgjs.git"
